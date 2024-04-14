@@ -1,0 +1,563 @@
+
+@font-face {
+    font-family: 'Literata';
+    src: url(/public/fonts/Literata.woff2) format('woff2-variations');
+    font-weight: 200 900;
+    font-optical-sizing: 7 72;
+    font-display: swap;
+}  
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+
+    z-index: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    height: 15vh;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(233, 233, 233, 0);
+
+}
+
+.header div {
+    position: relative;
+    width: 12.5vh;
+    height: 12.5vh;
+
+    background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0) 70%);
+}
+
+.header .div-spiral {
+
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    left: 10%;
+    top: 10%;
+
+    animation: spiral 8s infinite linear;
+    -moz-animation: spiral 8s infinite linear;
+    -webkit-animation: spiral 8s infinite linear;
+
+}
+
+@keyframes spiral {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.header .div-logo {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+
+.section {
+
+    overflow: hidden;
+    padding: 30vh 0;
+    width: 100%;
+
+    /* border: 2px solid black; */
+
+}
+
+
+.gallery {
+
+    display: flex;
+
+    /* border: 1px solid black;
+    border-radius: 1em; */
+
+    gap: 1em;
+
+    margin: 0 4%;
+    height: 27.5vw;
+    width: 40%;
+
+    padding: 0.5em;
+
+    max-height: 31.25em;
+
+    float: right;
+
+}
+
+/* gallery 1 */
+
+#gallery-1 .column-1 {
+    
+    flex: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+#gallery-1 .column-2 {
+    
+    flex: 1;
+
+    background-image: url(/public/images/image2.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 1em;
+
+}
+
+#gallery-1 .row-1 {
+    
+    flex: 1.5;
+
+    background-image: url(/public/images/image4.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 1em;
+
+}
+
+#gallery-1 .row-2 {
+
+    flex: 1;
+
+    display: flex;
+    gap: 1em;
+
+}
+
+#gallery-1 .row-2-column-1 {
+    
+    flex: 1;
+
+    background-image: url(/public/images/image6.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 1em;
+
+}
+
+#gallery-1 .row-2-column-2 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image7.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 1em;
+
+}
+
+/* gallery 2 */
+
+#gallery-2 {
+
+    flex-direction: column;
+
+}
+
+#gallery-2 .row-1 {
+    
+    flex: 1;
+
+    background-image: url(/public/images/image3.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+#gallery-2 .row-2 {
+
+    flex: 2;
+
+    display: flex;
+    gap: 1em;
+
+}
+
+#gallery-2 .row-2-column-1 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image10.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+#gallery-2 .row-2-column-2 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image1.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+#gallery-2 .row-2-column-3 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image9.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+
+/* gallery 3 */
+
+#gallery-3 .column-1 {
+    
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+#gallery-3 .column-1-row-1 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image8.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+#gallery-3 .column-1-row-2 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image10.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+#gallery-3 .column-2 {
+
+    flex: 0.5;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+#gallery-3 .column-2-row-1 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image4.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+#gallery-3 .column-2-row-2 {
+
+    flex: 1;
+
+    background-image: url(/public/images/image5.png);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1em;
+
+}
+
+/* glass div shit */
+
+
+.glassDiv {
+
+    display: block;
+
+    z-index: 500;
+
+    margin: 0 5%;
+    height: 27.5vw;
+    width: 40%;
+
+    max-height: 31.25em;
+
+    float: left;
+
+    border-radius: 3em;
+
+   /* border: 0.3em solid rgba(0, 0, 0, 0.6);
+    border-radius: 3em;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; */
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1); /* TODO: FIGURE OUT HOW TO MAKE SHADOW NOT AS THICK ON SMALLER SCREENS */
+
+    background-image: linear-gradient(114deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.35));
+
+    background-size: 200% 200%;
+
+    backdrop-filter: blur(10px);
+
+    animation: glassOffHover 0.7s ease;
+    -moz-animation: glassOffHover 0.7s ease;
+    -webkit-animation: glassOffHover 0.7s ease;
+
+    animation-fill-mode: forwards;
+
+}
+
+.glassDiv:hover {
+
+    animation: glassOnHover 0.4s ease;
+    -moz-animation: glassOnHover 0.4s ease;
+    -webkit-animation: glassOnHover 0.4s ease;
+
+    animation-fill-mode: forwards;
+
+}
+
+.glassDiv h3 {
+   
+    color: white;
+
+    font-family: 'Literata';
+    font-weight: 800;
+    font-optical-sizing: 12;
+
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    margin-top: clamp(.5rem, 4vw, 2.5rem);
+    margin-right: clamp(.5rem, 4vw, 4rem);
+    margin-bottom: 0;
+    margin-left: clamp(.5rem, 4vw, 4rem);
+
+    font-size: clamp(.5em, 4vw, 5em);
+
+    user-select: none;
+
+}
+
+.glassDiv h1 {
+
+    color: white;
+
+    font-family: 'Literata';
+    font-weight: 800;
+    font-optical-sizing: 12;
+
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    margin-top: clamp(-0.4em, -15%, 0em); /* good example of good sizing :)))) */
+    margin-right: clamp(.5rem, 10vw, 3rem);
+    margin-bottom: clamp(0.4em, 6%, 0em);
+    margin-left: clamp(.5rem, 4vw, 4rem);
+
+    
+    font-size: clamp(.5em, 8vw, 9em);
+
+    user-select: none;
+
+}
+
+.glassDiv h5 {
+
+    color: white;
+
+    font-family: 'Literata';
+    font-weight: 600;
+    font-optical-sizing: 12;
+
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    margin: 0;
+    margin-left: clamp(.5rem, 4vw, 4rem);
+
+
+    font-size: clamp(.5em, 2.5vw, 3em);
+
+    user-select: none;
+
+}
+
+@-webkit-keyframes glassOnHover {
+    from {
+
+        background-position: 0% 0%;
+    
+    }
+
+    to {
+
+        background-position: 70% 100%;
+
+    }
+}
+@-moz-keyframes glassOnHover {
+    from {
+
+        background-position: 0% 0%;
+    
+    }
+
+    to {
+
+        background-position: 70% 100%;
+
+    }
+}
+@keyframes glassOnHover {
+    from {
+
+        background-position: 0% 0%;
+    
+    }
+
+    to {
+
+        background-position: 70% 100%;
+
+    }
+}
+
+@-webkit-keyframes glassOffHover {
+    from {
+
+        background-position: 70% 100%;
+    
+    }
+
+    to {
+
+        background-position: 0% 0%;
+
+    }
+}
+@-moz-keyframes glassOffHover {
+    from {
+
+        background-position: 70% 100%;
+    
+    }
+
+    to {
+
+        background-position: 0% 0%;
+
+    }
+}
+@keyframes glassOffHover {
+    from {
+
+        background-position: 70% 100%;
+    
+    }
+
+    to {
+
+        background-position: 0% 0%;
+
+    }
+}
+
+
+
+/* bg color shit */
+
+
+
+#hero-text h1 {
+    color: black;
+    text-align: center;
+    font-size: 900%;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Literata';
+    font-weight: 800;
+    font-optical-sizing: 12;
+
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+
+    user-select: none;
+}
+
+
+
+/* aspect-ratio/reponsive ui shit 
+
+
+@media (max-aspect-ratio: 5/4) {
+    .glassDiv h1 {
+        color: red;
+    }
+}
+
+*/
