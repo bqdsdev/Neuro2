@@ -421,7 +421,7 @@ body {
 
     z-index: 100;
 
-    border: 0.3em solid rgba(0, 0, 0, 0.6);
+    border: 0.25vw solid rgba(0, 0, 0, 0.6);
     border-radius: 3em;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding-box;
