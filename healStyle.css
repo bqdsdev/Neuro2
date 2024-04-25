@@ -142,6 +142,7 @@ body {
 }
 
 
+
 /* SECTION */
 
 .section {
@@ -1004,10 +1005,10 @@ body {
     justify-items: stretch;
     justify-content: stretch; */
 
-    background-image: radial-gradient(ellipse at top right, rgb(199, 130, 199), rgba(255, 0, 0, 0) 60%),
-                      radial-gradient(ellipse at bottom right, rgb(81, 21, 190), rgba(255, 0, 0, 0) 60%),
-                      radial-gradient(ellipse at top left, rgb(160, 47, 235), rgba(255, 0, 0, 0) 60%),
-                      radial-gradient(ellipse at bottom left, rgb(87, 23, 129), rgba(255, 0, 0, 0) 60%); /* transition ??? */
+    background-image: radial-gradient(ellipse at top right, rgb(41, 131, 75), rgba(255, 0, 0, 0) 60%),
+                      radial-gradient(ellipse at bottom right, rgb(19, 141, 29), rgba(255, 0, 0, 0) 60%),
+                      radial-gradient(ellipse at top left, rgb(32, 199, 74), rgba(255, 0, 0, 0) 60%),
+                      radial-gradient(ellipse at bottom left, rgb(22, 173, 34), rgba(255, 0, 0, 0) 60%); /* transition ??? */
 
     /* filter: blur(20px); */
 
@@ -1197,4 +1198,111 @@ body {
 
 .gallery-hover {
     padding: 5vw;
+}
+
+
+.how-to-section {
+
+    height: 100vh;
+    width: 90vw;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    gap: 2vw;
+
+}
+
+.how-to-section .column-1 {
+    
+    flex: 1;
+    flex-direction: column;
+
+    padding: 2vw 0 2vw 5vw;
+
+}
+
+.how-to-section .column-2 {
+
+    flex: 1;
+    flex-direction: column;
+
+    padding: 2vw 0 2vw 0;
+
+}
+
+.how-to-section .column-3 {
+
+    flex: 1;
+    flex-direction: column;
+
+    padding: 2vw 5vw 2vw 0;
+
+}
+
+.how-to-box {
+    
+    flex: 1;
+
+    margin-top: 2vw;
+
+    z-index: 100;
+
+    border: 0.25vw solid rgba(0, 0, 0, 0.6);
+    border-radius: 3vw;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+
+    box-shadow: 0 0 1.5vw rgba(0, 0, 0, 1);
+
+    background-image: linear-gradient(114deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.35));
+    background-size: 200% 200%;
+
+    backdrop-filter: blur(75px);
+
+    animation: glassOffHover 0.7s ease;
+    -moz-animation: glassOffHover 0.7s ease;
+    -webkit-animation: glassOffHover 0.7s ease;
+
+    animation-fill-mode: forwards;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    color: var(--glass-text-color);
+
+    font-family: var(--glass-text-font);
+    font-weight: var(--glass-text-default-weight);
+    font-optical-sizing: 12;
+
+    text-shadow: var(--glass-text-default-shadow);
+    font-size: clamp(.5em, 1.5vw, 9em);
+    padding: 2vw;
+
+}
+
+.picture-box {
+
+    flex: 1;
+
+    margin-top: 2vw;
+
+    z-index: 100;
+
+    box-shadow: 0 0 1.5vw rgba(0, 0, 0, 1);
+
+    background-image: url('/public/images/Hori2.png');
+    
+    border-radius: 3vw;
+
+    min-height: 7.5vh;
+    max-height: 7.5vh;
+
+    text-decoration: none;
+
+    padding: 24.5vh 3vw;
+
 }
