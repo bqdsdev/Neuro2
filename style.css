@@ -65,7 +65,7 @@ body {
 .header {
 
     padding: 1vh;
-    width: 98.75%;
+    width: 100%;
     height: var(--def-top-bottom-size);
 
 
@@ -117,8 +117,6 @@ body {
 
 
     ul {
-
-        border: 2px red solid;
 
         width: 100%;
         margin: 0;
@@ -790,7 +788,13 @@ body {
 
         flex-direction: column;
 
+        gap: 1vh;
+
+        padding: 0;
+
         .logo-wrapper {
+            margin-top: 1vh;
+            margin-right: 5.75vw;
             max-height: 7.5vh;
         }
 
@@ -800,7 +804,7 @@ body {
             text-align: center;
 
             li {
-                font-size: 4vw;
+                font-size: clamp(0.1em, 4vw, 1.75em);
                 padding: 0.5vh 1.25vw;
                 margin: 0%;
             }
