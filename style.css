@@ -29,11 +29,11 @@
 
     --def-section-height: 95vh;
     --def-section-padding: 5vh;
-    --def-section-margin: 15vh 0;
+    --def-section-margin: 25vh 0;
 
     /* for the header/footer */
 
-    --def-top-bottom-size: 13vh;
+    --def-top-bottom-size: 15vh;
 
 }
 
@@ -55,8 +55,8 @@ body {
 
     background-color: #FFF5EE;
     /* background-image: radial-gradient(60% 17.5% at 95% 7.5%, rgba(0, 255, 25, 0.65), rgba(0, 0, 0, 0));
-                      /* radial-gradient(35% 10% at 22.5% 47.5%, rgba(0, 255, 25, 0.65), rgba(0, 0, 0, 0) 100%),
-                      radial-gradient(55% 6% at 50% 67.5%, rgba(0, 255, 25, 0.65), rgba(0, 0, 0, 0) 100%); */
+                        /* radial-gradient(35% 10% at 22.5% 47.5%, rgba(0, 255, 25, 0.65), rgba(0, 0, 0, 0) 100%),
+                        radial-gradient(55% 6% at 50% 67.5%, rgba(0, 255, 25, 0.65), rgba(0, 0, 0, 0) 100%); */
 
 }
 
@@ -67,6 +67,7 @@ body {
     padding: 1vh;
     width: 100%;
     height: var(--def-top-bottom-size);
+    box-sizing: border-box;
 
 
     display: flex;
@@ -76,8 +77,8 @@ body {
 
     .logo-wrapper {
 
-        width: 15vh;
-        height: 15vh;
+        width: 13vh;
+        height: 13vh;
         position: relative;
         /* come back and give them a max-height and max-width later */
 
@@ -92,6 +93,9 @@ body {
 
             width: 100%;
             height: 100%;
+
+            pointer-events: none;
+            user-select: none;
 
         }
 
@@ -118,13 +122,16 @@ body {
 
     ul {
 
-        width: 100%;
+        width: 80%;
         margin: 0;
         padding: 0;
 
 
         list-style-type: none;
         text-align: left;
+
+
+        user-select: none;
 
 
         li {
@@ -143,9 +150,6 @@ body {
             text-decoration: none;
             font-weight: var(--bold-font-weight);
             font-size: 1.5vw;
-
-
-            user-select: none;
 
 
             transition: all 0.1s ease;
@@ -179,8 +183,7 @@ body {
 
 .hero-section {
 
-    margin: 0 0 30vh 0;
-    height: var(--def-section-height);
+    margin: 0 0 25vh 0;
     padding: 0;
 
 
@@ -307,14 +310,15 @@ body {
 
     .row-2 {
 
-        height: 100%;
+        height: 90vh;
         margin: 0 2.5vw 0 0;
         margin-left: auto;
-        max-width: 963px;
-        max-height: 974px;
 
 
         flex: 1;
+
+        pointer-events: none;
+        user-select: none;
 
 
         img {
@@ -343,7 +347,6 @@ body {
 
     position: relative;
     margin: var(--def-section-margin);
-    height: 100vh;
     padding: 0;
 
 
@@ -360,6 +363,8 @@ body {
         left: 35%;
         object-fit: contain;
         filter: drop-shadow(0 0 5px black);
+        pointer-events: none;
+        user-select: none;
     }
 
 
@@ -385,14 +390,15 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
+        pointer-events: none;
+        user-select: none;
+
     }
 
 
     .info-container {
 
-        height: 70%;
-        max-width: 624px;
-        max-height: 756px;
+        height: 80vh;
 
 
         flex: 1;
@@ -404,7 +410,7 @@ body {
 
         div {
 
-            margin: 5%;
+            margin: 1vh;
             max-height: 27.5%;
 
 
@@ -427,9 +433,13 @@ body {
 
                 flex: 1;
 
-                max-width: 10%;
+                max-width: 25%;
                 max-height: 60%;
                 object-fit: contain;
+                text-align: center;
+                
+                pointer-events: none;
+                user-select: none;
 
             }
 
@@ -440,18 +450,12 @@ body {
     .row-1 {
 
         margin: 0 0 5vh 2.5vw;
+        margin-top: 10%;
 
 
         div {
 
             text-align: left;
-
-        }
-
-
-        img {
-
-            margin-left: 3.25%;
 
         }
 
@@ -461,18 +465,12 @@ body {
 
         margin: 0 2.5vw 5vh 0;
         margin-left: auto;
+        margin-top: 10%;
 
 
         div {
 
             text-align: right;
-
-        }
-
-
-        img {
-
-            margin-right: 3.25%;
 
         }
 
@@ -485,13 +483,10 @@ body {
 .about-section {
 
     margin: var(--def-section-margin);
-    height: var(--def-section-height);
-    padding: var(--def-section-padding);
 
 
     display: flex;
     align-items: center;
-    gap: 2vw;
 
 
     .about-container {
@@ -508,6 +503,8 @@ body {
     .row-1 {
 
         text-align: center;
+        margin: 0 0 0 5vw;
+        height: 80vh;
 
 
         img {
@@ -525,7 +522,7 @@ body {
 
     .row-2 {
 
-        margin: 0 2.5vw 0 0;
+        margin: 0 5vw 0 0;
 
 
         display: flex;
@@ -572,9 +569,9 @@ body {
 .ref-section {
 
     margin: var(--def-section-margin);
-    height: var(--def-section-height);
     padding: var(--def-section-padding);
 
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -583,9 +580,6 @@ body {
 
 
     .column-1 {
-
-        flex: 0.25;
-
 
         text-align: center;
         font-family: var(--def-lrg-font);
@@ -603,22 +597,21 @@ body {
 
     .column-2 {
 
-        max-height: 80%;
+        height: 60vh;
+        max-height: 60vh;
 
 
-        flex: 1;
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
         gap: 2vw;
-
 
 
         .ref-wrapper {
 
             height: 100%;
             max-height: 100%;
-            max-width: 27.5%;
+            max-width: 30%;
 
 
             flex: 1;
@@ -779,7 +772,6 @@ body {
     }
 }
 
-
 /* MEDIA QUERY */
 
 @media (max-aspect-ratio: 5/4) {
@@ -810,7 +802,7 @@ body {
             }
 
         }
-        
+
     }
 
     .hero-section {
@@ -904,36 +896,47 @@ body {
             width: 90%;
             max-width: 90%;
             height: auto;
-            max-height: 30%;
 
             div {
 
                 margin: 0;
-                max-height: 30%;
+                height: 30vh;
 
                 gap: 0.5vh;
-    
-                font-size: clamp(0.1em, 2vw, 1.75em);
-    
-    
+
+                font-size: clamp(0.1em, 2vh, 1.25em);
+
+
                 div {
-    
+
                     height: 100%;
                     max-height: 100%;
-    
+
                 }
-    
-    
+
+
                 img {
-    
-                    flex: 1;
-    
-                    max-width: 15%;
+
+                    max-width: 30%;
                     max-height: 100%;
                     object-fit: contain;
-    
+                    text-align: center;
+
                 }
-    
+
+                #point-2-img {
+                    order: 2;
+                }
+
+                #point-2 {
+                    text-align: right;
+                }
+
+                #point-5 {
+                    order: 2;
+                    text-align: left;
+                }
+
             }
 
         }
@@ -945,7 +948,7 @@ body {
         .row-2 {
             margin: 0;
         }
-    
+
     }
 
     .about-section {
@@ -954,12 +957,14 @@ body {
 
         .row-1 {
             margin: 0;
-            max-height: 60%;
+            height: 50vh;
+            max-width: 80%;
         }
 
         .row-2 {
 
             margin: 0;
+            max-width: 90%;
 
             justify-content: start;
             gap: 1vh;
@@ -970,25 +975,25 @@ body {
 
                 width: 100%;
 
-                font-size: clamp(0.1em, 9vw, 7.25em);
-    
-    
+                font-size: clamp(0.1em, 10vw, 3em);
+
+
                 background: linear-gradient(160deg, #61FF00 30%, #00700B);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-    
-    
+
+
             }
-    
-    
+
+
             .about-paragraph {
-    
+
                 margin: 0;
-    
-    
-                font-size: clamp(0.1em, 3vw, 1.8em);
-    
+
+
+                font-size: clamp(0.1em, 2vh, 1.25em);
+
             }
 
         }
@@ -997,18 +1002,19 @@ body {
 
     .ref-section {
 
-        height: 80%;
-        max-height: auto;
+        padding: 0;
 
         .column-1 {
-            flex: 0;
+            font-size: clamp(0.1em, 10vw, 3em);
+            margin: 0 5vw;
         }
 
         .column-2 {
-            flex: 0;
             flex-direction: column;
-            gap: 1vh;
-            max-height: auto;
+            gap: 5vh;
+
+            height: auto;
+            max-height: 100%;
 
             .ref-wrapper {
                 height: auto;
@@ -1030,15 +1036,15 @@ body {
                 .name {
 
                     font-weight: var(--medium-font-weight);
-                    font-size: clamp(0.1em, 5vw, 3em);
-    
+                    font-size: clamp(0.1em, 4vh, 2em);
+
                 }
-    
-    
+
+
                 .testimony {
-    
-                    font-size: clamp(0.1em, 2vw, 1.75em);
-    
+
+                    font-size: clamp(0.1em, 2vh, 1.25em);
+
                 }
 
             }
