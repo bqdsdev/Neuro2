@@ -862,6 +862,7 @@ body {
             margin: 0;
 
             max-height: 50%;
+            width: 75%;
         }
 
     }
@@ -900,9 +901,9 @@ body {
             div {
 
                 margin: 0;
-                height: 30vh;
+                height: 25vh;
 
-                gap: 0.5vh;
+                gap: 5vw;
 
                 font-size: clamp(0.1em, 2vh, 1.25em);
 
@@ -920,7 +921,6 @@ body {
                     max-width: 30%;
                     max-height: 100%;
                     object-fit: contain;
-                    text-align: center;
 
                 }
 
@@ -928,13 +928,8 @@ body {
                     order: 2;
                 }
 
-                #point-2 {
-                    text-align: right;
-                }
-
                 #point-5 {
                     order: 2;
-                    text-align: left;
                 }
 
             }
@@ -943,10 +938,18 @@ body {
 
         .row-1 {
             margin: 0;
+            
+            div {
+                text-align: center !important;
+            }
         }
 
         .row-2 {
             margin: 0;
+            
+            div {
+                text-align: center !important;
+            }
         }
 
     }
