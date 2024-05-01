@@ -197,11 +197,9 @@ body {
         height: 95%;
         margin: 0 0 0 2.5vw;
         padding: 0 2.5%;
+        width: 40vw;
         max-width: 963px;
         max-height: 974px;
-
-
-        flex: 1;
 
 
         display: flex;
@@ -311,11 +309,8 @@ body {
     .row-2 {
 
         height: 90vh;
-        margin: 0 2.5vw 0 0;
+        margin: 0 7.5vw 0 0;
         margin-left: auto;
-
-
-        flex: 1;
 
         pointer-events: none;
         user-select: none;
@@ -527,7 +522,7 @@ body {
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         justify-content: center;
         gap: 2vw;
 
@@ -553,8 +548,7 @@ body {
 
         .about-paragraph {
 
-            margin: 0 5%;
-
+            margin: 0 2%;
 
             font-size: clamp(0.1em, 1.3vw, 1.8em);
 
@@ -861,8 +855,10 @@ body {
 
             margin: 0;
 
-            max-height: 50%;
+            height: 50vh;
+            max-height: 50vh;
             width: 75%;
+
         }
 
     }
@@ -957,6 +953,8 @@ body {
     .about-section {
 
         flex-direction: column;
+
+        gap: 2vh;
 
         .row-1 {
             margin: 0;
