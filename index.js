@@ -11,16 +11,16 @@ function sleep(ms) {
 let transitionTime = 500
 let intervalFrame;
 
-let healingColor = { r: 0, g: 225, b: 25 }
+let healingColor = { r: 24, g: 174, b: 0 }
 let elegantColor = { r: 255, g: 199, b: 0 }
 let mindsetColor = { r: 0, g: 255, b: 194 }
 let currentColor = healingColor
 
+let aspectRatio = 'PC'
 let selectedSection = 'healing'
 
 
-// apply gradient here instead of with css
-document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(30% 10% at 25% 49%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(55% 6% at 50% 67.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+// document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(30% 10% at 25% 49%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(55% 6% at 50% 67.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
 
 
 const getColor = function(pct, colorSet) {
@@ -63,7 +63,13 @@ const animateGradient = function(color) {
             currentPct = Math.min(elapsed / numberOfFrames, 1) * 100;
             
             let newColor = getColor(currentPct, color);
-            let generateGradient = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(35% 10% at 22.5% 47.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(55% 6% at 50% 67.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+            let generateGradient
+
+            if (aspectRatio == 'PC') {
+                generateGradient = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(35% 10% at 22.5% 47.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(55% 6% at 50% 67.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+            } else if (aspectRatio == 'MOBILE') {
+                generateGradient = `radial-gradient(70% 4% at 50% 5.65%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 47.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 76%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+            }
 
             document.body.style.backgroundImage = generateGradient;
             currentColor = newColor;
@@ -87,7 +93,7 @@ const healingContent = {
     buttonGradient: 'linear-gradient(160deg, #61FF00 30%, #00a310)',
     buttonShadow: '0 0 30px #00a310',
     infoImage: '/public/images/EditedVert1.png',
-    point1: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati magni soluta aperiam reprehenderit nemo voluptatum eos vel dolorum ipsam.',
+    point1: 'How to remove negative energy and re energize the problem zones in your body',
     point2: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia maiores consequatur aspernatur dolor doloremque velit, asperiores numquam iusto deleniti nostrum.',
     point3: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat nesciunt suscipit iste doloribus enim maiores consectetur eveniet dicta itaque?',
     point4: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsum itaque aspernatur molestias cumque consequatur minima omnis sint quos iure?',
@@ -225,6 +231,14 @@ document.getElementById('healing').addEventListener('click', function() {
     animateGradient(color);
     changeContents(healingContent);
 
+    const alreadyAnimated = document.querySelectorAll('.animate');
+
+    for (let i = 0; i < alreadyAnimated.length; i++) {
+        const el = alreadyAnimated[i];
+
+        el.classList.remove('animate');
+    }
+
 });
 document.getElementById('elegant').addEventListener('click', function() {
     
@@ -246,6 +260,14 @@ document.getElementById('elegant').addEventListener('click', function() {
 
     animateGradient(color);
     changeContents(elegantContent);
+
+    const alreadyAnimated = document.querySelectorAll('.animate');
+
+    for (let i = 0; i < alreadyAnimated.length; i++) {
+        const el = alreadyAnimated[i];
+
+        el.classList.remove('animate');
+    }
 
 });
 document.getElementById('mindset').addEventListener('click', function() {
@@ -269,8 +291,93 @@ document.getElementById('mindset').addEventListener('click', function() {
     animateGradient(color);
     changeContents(mindsetContent);
 
+    const alreadyAnimated = document.querySelectorAll('.animate');
+
+    for (let i = 0; i < alreadyAnimated.length; i++) {
+        const el = alreadyAnimated[i];
+
+        el.classList.remove('animate');
+    }
+
 });
 
+
+function aspectChange(aspectMedia) {
+
+    if (aspectMedia.matches) {
+        aspectRatio = 'MOBILE';
+        document.body.style.backgroundImage = `radial-gradient(70% 4% at 50% 5.65%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 47.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 76%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+        
+        document.getElementById('info-header').classList.remove('animate-down');
+        document.getElementById('info-two').classList.remove('animate-right');
+        document.getElementById('info-five').classList.remove('animate-left');
+        document.getElementById('info-header').classList.add('animate-up');
+        document.getElementById('info-two').classList.add('animate-left');
+        document.getElementById('info-five').classList.add('animate-right');
+
+        document.getElementById('about-img').classList.remove('animate-right');
+        document.getElementById('about-header').classList.remove('animate-left');
+        document.getElementById('about-paragraph').classList.remove('animate-left');
+        document.getElementById('about-img').classList.add('animate-down');
+        document.getElementById('about-header').classList.add('animate-up');
+        document.getElementById('about-paragraph').classList.add('animate-up');
+
+        console.log('SWAPPING TO MOBILE');
+    } else {
+        aspectRatio = 'PC';
+        document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 53.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 75%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+        
+        document.getElementById('info-two').classList.remove('animate-right');
+        document.getElementById('info-five').classList.remove('animate-left');
+        document.getElementById('info-two').classList.add('animate-right');
+        document.getElementById('info-five').classList.add('animate-left');
+
+        document.getElementById('about-img').classList.remove('animate-down');
+        document.getElementById('about-header').classList.remove('animate-up');
+        document.getElementById('about-paragraph').classList.remove('animate-up');
+        document.getElementById('about-img').classList.add('animate-right');
+        document.getElementById('about-header').classList.add('animate-left');
+        document.getElementById('about-paragraph').classList.add('animate-left');
+
+        console.log('SWAPPING TO PC');
+    }
+
+}
+
+var aspectMedia = window.matchMedia("(max-aspect-ratio: 5/4)")
+
+aspectChange(aspectMedia);
+
+// Attach listener function on state changes
+aspectMedia.addEventListener("change", function() {
+  aspectChange(aspectMedia);
+}); 
+
+
+const animationElements = document.querySelectorAll('.animate-right, .animate-left, .animate-down, .animate-up');
+
+const options = {
+    root: null,
+    threshold: 0.5,
+    rootMargin: '10px',
+}
+
+
+function callback(entries) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    })
+}
+
+const observer = new IntersectionObserver(callback, options);
+
+for (let i = 0; i < animationElements.length; i++) {
+    const el = animationElements[i];
+
+    observer.observe(el);
+}
 
 /* 
 

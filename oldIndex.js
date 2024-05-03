@@ -73,7 +73,7 @@ const animationElements = document.querySelectorAll('.animate-right, .animate-le
 
 const options = {
     root: null,
-    threshold: 0.4,
+    threshold: 0.5,
     rootMargin: '10px',
 }
 
@@ -81,68 +81,10 @@ const options = {
 function callback(entries) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            /* if (entry.target.id == 'course-1') {
-                const g1 = document.getElementById('g1');
-                const g2 = document.getElementById('g2');
-                const g3 = document.getElementById('g3');
-
-                g1.classList.add('g1-section-1');
-                g2.classList.add('g2-section-1');
-                g3.classList.add('g3-section-1');
-            }
-            if (entry.target.id == 'course-2') {
-                const g1 = document.getElementById('g1');
-                const g2 = document.getElementById('g2');
-                const g3 = document.getElementById('g3');
-
-                g1.classList.add('g1-section-2');
-                g2.classList.add('g2-section-2');
-                g3.classList.add('g3-section-2');
-            }
-            if (entry.target.id == 'course-3') {
-                const g1 = document.getElementById('g1');
-                const g2 = document.getElementById('g2');
-                const g3 = document.getElementById('g3');
-
-                g1.classList.add('g1-section-3');
-                g2.classList.add('g2-section-3');
-                g3.classList.add('g3-section-3');
-            }
-            else { */
-                entry.target.classList.add('animate');
-            //}
+            entry.target.classList.add('animate');
         }
         else {
-            /* if (entry.target.id == 'course-1') {
-                const g1 = document.getElementById('g1');
-                const g2 = document.getElementById('g2');
-                const g3 = document.getElementById('g3');
-
-                g1.classList.remove('g1-section-1');
-                g2.classList.remove('g2-section-1');
-                g3.classList.remove('g3-section-1');
-            }
-            if (entry.target.id == 'course-2') {
-                const g1 = document.getElementById('g1');
-                const g2 = document.getElementById('g2');
-                const g3 = document.getElementById('g3');
-
-                g1.classList.remove('g1-section-2');
-                g2.classList.remove('g2-section-2');
-                g3.classList.remove('g3-section-2');
-            }
-            if (entry.target.id == 'course-3') {
-                const g1 = document.getElementById('g1');
-                const g2 = document.getElementById('g2');
-                const g3 = document.getElementById('g3');
-
-                g1.classList.remove('g1-section-3');
-                g2.classList.remove('g2-section-3');
-                g3.classList.remove('g3-section-3');
-            }
-            else { */
-                entry.target.classList.remove('animate');
-            //}
+            entry.target.classList.remove('animate');
         }
     })
 }
