@@ -1,5 +1,33 @@
 window.onload = function() {
 
+    let images = document.getElementsByClassName("openable-img");
+
+    for(let i = 0; i < images.length; i++) {
+    
+        const img = images[i];
+
+        img.onclick = function() {
+            openImage(img);
+        }
+
+        img.onmouseover = function() {
+            img.classList.add('gallery-hover');
+        }
+
+        img.onmouseout = function() {
+            img.classList.remove('gallery-hover');
+        }
+
+    }
+
+    const lightbox = document.getElementById('img-lightbox');
+    const currentImg = document.getElementById('open-image');
+
+    lightbox.onclick = function() {
+        lightbox.classList.remove('lb-opening');
+        currentImg.classList.remove('img-opening');
+    }
+
 }
 
 function sleep(ms) {
@@ -377,6 +405,23 @@ for (let i = 0; i < animationElements.length; i++) {
     const el = animationElements[i];
 
     observer.observe(el);
+}
+
+
+function openImage(img) {
+
+    const imgUrl = img.src;
+
+    const lightbox = document.getElementById('img-lightbox');
+    const currentImg = document.getElementById('open-image');
+
+    if (currentImg.src != imgUrl) {
+        currentImg.src = imgUrl;
+    }
+
+    lightbox.classList.add('lb-opening');
+    currentImg.classList.add('img-opening');
+
 }
 
 /* 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8" />
@@ -7,113 +8,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NEURO-COURSES</title>
 </head>
+
 <body id="body">
 
-<nav class="header" id="header">
-
-    <div class="logo-wrapper">
-        <img src="/public/images/spiral5.svg" class="spiral"></img>
-        <img src="/public/images/n8.svg" class="logo"></img>
-    </div>
-
-    <ul>
-        <li id="healing">HEALING</li>
-        <li class="headerHide" id="elegant">ELEGANT</li>
-        <li class="headerHide" id="mindset">MINDSET</li>
-    </ul>
-</nav>
-
-<div class="hero-section" id="hero">
-    <div class="row-1">
-        <div class="upper-text">UNLOCK YOUR</div>
-        <div class="main-text show" id="hero-text">HEALING</div>
-        <div class="lower-text">SIDE</div>
-        <div class="paragraph show" id="hero-paragraph"><b>Neuro Healing™</b> is an interactive program on how to <b>improve</b> your <b>health</b>.</div>
-        <a class="show" href="#final" id="hero-button">SIGN UP!</a>
-    </div>
-    <div class="row-2">
-        <img class="show"src="/public/images/EditedVert1.png" id="hero-img"></img>
-    </div>
-</div>
-
-<div class="info-section" id="info">
-    <div class="header-text animate-down" id="info-header">WHAT WILL I LEARN?</div>
-    <img class="large-image animate-up" id="info-image" src="/public/images/EditedVert1.png"></img>
-    <div class="info-container row-1">
-        <div class="one animate-right" id="info-one">
-            <img src="/public/images/EditedVert1.png" id="point-1-img"></img>
-            <div id="point-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati magni soluta aperiam reprehenderit nemo voluptatum eos vel dolorum ipsam.</div>
-        </div>
-        <div class="two animate-right" id="info-two">
-            <img src="/public/images/EditedVert1.png" id="point-2-img"></img>
-            <div id="point-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia maiores consequatur aspernatur dolor doloremque velit, asperiores numquam iusto deleniti nostrum.</div>
-        </div>
-        <div class="three animate-right" id="info-three">
-            <img src="/public/images/EditedVert1.png" id="point-3-img"></img>
-            <div id="point-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat nesciunt suscipit iste doloribus enim maiores consectetur eveniet dicta itaque?</div>
-        </div>
-    </div>
-    <div class="info-container row-2">
-        <div class="four animate-left" id="info-four">
-            <div id="point-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsum itaque aspernatur molestias cumque consequatur minima omnis sint quos iure?</div>
-            <img src="/public/images/EditedVert1.png" id="point-4-img"></img>
-        </div>
-        <div class="five animate-left" id="info-five">
-            <div id="point-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sed cum nihil id omnis doloribus. Repellendus labore nam deserunt quos!</div>
-            <img src="/public/images/EditedVert1.png" id="point-5-img"></img>
-        </div>
-        <div class="six animate-left" id="info-six">
-            <div id="point-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo repudiandae omnis consequatur, neque corporis tempore! Officiis molestias maxime ratione!</div>
-            <img src="/public/images/EditedVert1.png" id="point-6-img"></img>
-        </div>
-    </div>
-</div>
-
-<div class="about-section" id="about">
-    <div class="about-container row-1 animate-right" id="about-img">
-        <img src="/public/images/pfp.jpg"></img>
-    </div>
-    <div class="about-container row-2">
-        <div class="about-header animate-left" id="about-header">WHO AM I?</div>
-        <div class="about-paragraph animate-left" id="about-paragraph">I am Marina MacLeod, and I have been teaching my clients an alternative way of finding their own internal and external freedom, improvements of health, and overall quality of life through shamanic and neuro-based algorithms, designed specifically for my clients. My courses can help my clients investigate and solve their deep-rooted problems in the shortest possible time.<br><br>I was a fashion designer and an image creator for many years when I realized that the beauty within needs to be discovered first and after to be freed through the image and shown to the world by creating the life of your dreams. 
-        </div>
-    </div>
-</div>
-
-<div class="ref-section" id="ref">
-    <div class="column-1 animate-down" id="ref-header">
-        WHAT ARE STUDENTS SAYING?
-    </div>
-    <div class="column-2">
-        <div class="one ref-wrapper animate-up">
-            <img src="/public/images/Sqre1.png"></img>
-            <div class="name">Benjamin MacLeod</div>
-            <div class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo animi ratione, at porro hic facilis possimus et vero. Perferendis nisi doloribus error!</div>
-        </div>
-        <div class="two ref-wrapper animate-up">
-            <img src="/public/images/Sqre2.png"></img>
-            <div class="name">Maria Maldiva</div>
-            <div class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, placeat? Porro rem, facilis id nobis, temporibus necessitatibus eius impedit perferendis ut deserunt, beatae inventore illo illum amet perspiciatis error quisquam!</div>
-        </div>
-        <div class="three ref-wrapper animate-up">
-            <img src="/public/images/Sqre3.png"></img>
-            <div class="name">John Lennon</div>
-            <div class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ratione accusamus! Totam explicabo odio in recusandae maxime magnam nihil aliquam perspiciatis harum. Eveniet, facilis nam!</div>
+    <div class="img-lightbox" id="img-lightbox">
+        <div class="img-wrapper">
+            <img class="open-image" id="open-image" src=""></img>
         </div>
     </div>
 
-</div>
+    <nav class="header" id="header">
 
-<div class="final-section" id="final">
-    <div class="upper" id="final-header">JOIN US TODAY!</div>
-    <a href="#hero" id="final-button">GET IN CONTACT</a>
-</div>
+        <div class="logo-wrapper">
+            <img src="/public/images/spiral5.svg" class="spiral"></img>
+            <img src="/public/images/n8.svg" class="logo"></img>
+        </div>
 
-<div class="footer" id="footer">
-    PLACEHOLDER
-</div>
+        <ul>
+            <li id="healing">HEALING</li>
+            <li class="headerHide" id="elegant">ELEGANT</li>
+            <li class="headerHide" id="mindset">MINDSET</li>
+        </ul>
+    </nav>
 
-<script src="index.js"></script>
+    <div class="hero-section" id="hero">
+        <div class="row-1">
+            <div class="upper-text">UNLOCK YOUR</div>
+            <div class="main-text show" id="hero-text">HEALING</div>
+            <div class="lower-text">SIDE</div>
+            <div class="paragraph show" id="hero-paragraph"><b>Neuro Healing™</b> is an interactive program on how to
+                <b>improve</b> your <b>health</b>.</div>
+            <a class="show" href="#final" id="hero-button">SIGN UP!</a>
+        </div>
+        <div class="row-2">
+            <img class="show" src="/public/images/EditedVert1.png" id="hero-img"></img>
+        </div>
+    </div>
+
+    <div class="info-section" id="info">
+        <div class="header-text animate-down" id="info-header">WHAT WILL I LEARN?</div>
+        <img class="large-image animate-up" id="info-image" src="/public/images/EditedVert1.png"></img>
+        <div class="info-container row-1">
+            <div class="one animate-right" id="info-one">
+                <img src="/public/images/EditedVert1.png" id="point-1-img"></img>
+                <div id="point-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati magni
+                    soluta aperiam reprehenderit nemo voluptatum eos vel dolorum ipsam.</div>
+            </div>
+            <div class="two animate-right" id="info-two">
+                <img src="/public/images/EditedVert1.png" id="point-2-img"></img>
+                <div id="point-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia maiores consequatur
+                    aspernatur dolor doloremque velit, asperiores numquam iusto deleniti nostrum.</div>
+            </div>
+            <div class="three animate-right" id="info-three">
+                <img src="/public/images/EditedVert1.png" id="point-3-img"></img>
+                <div id="point-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat nesciunt
+                    suscipit iste doloribus enim maiores consectetur eveniet dicta itaque?</div>
+            </div>
+        </div>
+        <div class="info-container row-2">
+            <div class="four animate-left" id="info-four">
+                <div id="point-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsum itaque aspernatur
+                    molestias cumque consequatur minima omnis sint quos iure?</div>
+                <img src="/public/images/EditedVert1.png" id="point-4-img"></img>
+            </div>
+            <div class="five animate-left" id="info-five">
+                <div id="point-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sed cum nihil id
+                    omnis doloribus. Repellendus labore nam deserunt quos!</div>
+                <img src="/public/images/EditedVert1.png" id="point-5-img"></img>
+            </div>
+            <div class="six animate-left" id="info-six">
+                <div id="point-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo repudiandae
+                    omnis consequatur, neque corporis tempore! Officiis molestias maxime ratione!</div>
+                <img src="/public/images/EditedVert1.png" id="point-6-img"></img>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" id="about">
+        <div class="about-container row-1 animate-right" id="about-img">
+            <img class="openable-img" src="/public/images/pfp.jpg"></img>
+        </div>
+        <div class="about-container row-2">
+            <div class="about-header animate-left" id="about-header">WHO AM I?</div>
+            <div class="about-paragraph animate-left" id="about-paragraph">I am Marina MacLeod, and I have been teaching
+                my clients an alternative way of finding their own internal and external freedom, improvements of
+                health, and overall quality of life through shamanic and neuro-based algorithms, designed specifically
+                for my clients. My courses can help my clients investigate and solve their deep-rooted problems in the
+                shortest possible time.<br><br>I was a fashion designer and an image creator for many years when I
+                realized that the beauty within needs to be discovered first and after to be freed through the image and
+                shown to the world by creating the life of your dreams.
+            </div>
+        </div>
+    </div>
+
+    <div class="ref-section" id="ref">
+        <div class="column-1 animate-down" id="ref-header">
+            WHAT ARE STUDENTS SAYING?
+        </div>
+        <div class="column-2">
+            <div class="one ref-wrapper animate-up">
+                <img class="openable-img" src="/public/images/Sqre1.png"></img>
+                <div class="name">Benjamin MacLeod</div>
+                <div class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo animi
+                    ratione, at porro hic facilis possimus et vero. Perferendis nisi doloribus error!</div>
+            </div>
+            <div class="two ref-wrapper animate-up">
+                <img class="openable-img" src="/public/images/Sqre2.png"></img>
+                <div class="name">Maria Maldiva</div>
+                <div class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, placeat? Porro
+                    rem, facilis id nobis, temporibus necessitatibus eius impedit perferendis ut deserunt, beatae
+                    inventore illo illum amet perspiciatis error quisquam!</div>
+            </div>
+            <div class="three ref-wrapper animate-up">
+                <img class="openable-img" src="/public/images/Sqre3.png"></img>
+                <div class="name">John Lennon</div>
+                <div class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ratione
+                    accusamus! Totam explicabo odio in recusandae maxime magnam nihil aliquam perspiciatis harum.
+                    Eveniet, facilis nam!</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="final-section" id="final">
+        <div class="upper" id="final-header">JOIN US TODAY!</div>
+        <a href="#hero" id="final-button">GET IN CONTACT</a>
+    </div>
+
+    <div class="footer" id="footer">
+        PLACEHOLDER
+    </div>
+
+    <script src="index.js"></script>
 
 </body>
+
 </html>
