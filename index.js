@@ -28,6 +28,16 @@ window.onload = function() {
         currentImg.classList.remove('img-opening');
     }
 
+    const contactLightbox = document.getElementById('contact-lightbox');
+    
+    document.getElementById('final-button').onclick = function() {
+        contactLightbox.classList.add('contact-opening');
+    }
+
+    contactLightbox.onclick = function() {
+        contactLightbox.classList.remove('contact-opening');
+    }
+
 }
 
 function sleep(ms) {
@@ -39,8 +49,8 @@ function sleep(ms) {
 let transitionTime = 500
 let intervalFrame;
 
-let healingColor = { r: 24, g: 174, b: 0 }
-let elegantColor = { r: 255, g: 199, b: 0 }
+let healingColor = { r: 255, g: 199, b: 0 }
+let elegantColor = { r: 252, g: 105, b: 255 }
 let mindsetColor = { r: 0, g: 255, b: 194 }
 let currentColor = healingColor
 
@@ -94,7 +104,7 @@ const animateGradient = function(color) {
             let generateGradient
 
             if (aspectRatio == 'PC') {
-                generateGradient = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(35% 10% at 22.5% 47.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(55% 6% at 50% 67.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+                generateGradient = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 53.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 75%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
             } else if (aspectRatio == 'MOBILE') {
                 generateGradient = `radial-gradient(70% 4% at 50% 5.65%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 47.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 76%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
             }
@@ -114,19 +124,19 @@ const animateGradient = function(color) {
 
 
 const healingContent = {
-    textGradient: 'linear-gradient(160deg, #61FF00 30%, #00700B)',
+    textGradient: 'linear-gradient(160deg, #FFC700 30%, #FF6B00)',
     heroImage: '/public/images/EditedVert1.png',
     heroText: 'HEALING',
     heroParagraph: '<b>Neuro Healing™</b> is an interactive program on how to <b>improve your health</b>.',
-    buttonGradient: 'linear-gradient(160deg, #61FF00 30%, #00a310)',
-    buttonShadow: '0 0 30px #00a310',
+    buttonGradient: 'linear-gradient(160deg, #FFC700 30%, #FF6B00)',
+    buttonShadow: '0 0 30px #FF6B00',
     infoImage: '/public/images/EditedVert1.png',
-    point1: 'How to remove negative energy and re energize the problem zones in your body',
-    point2: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia maiores consequatur aspernatur dolor doloremque velit, asperiores numquam iusto deleniti nostrum.',
-    point3: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat nesciunt suscipit iste doloribus enim maiores consectetur eveniet dicta itaque?',
-    point4: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsum itaque aspernatur molestias cumque consequatur minima omnis sint quos iure?',
-    point5: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sed cum nihil id omnis doloribus. Repellendus labore nam deserunt quos!',
-    point6: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo repudiandae omnis consequatur, neque corporis tempore! Officiis molestias maxime ratione!',
+    point1: 'How to remove negative energy and re energize the problem zones in your body.',
+    point2: 'How to cleanse the organs and channels of energy flow using sound healing.',
+    point3: 'How to improve your health by using vibrations of the shamanic tools.',
+    point4: 'How to manage your weight condition using the magnets tools for balance.',
+    point5: 'How to rebalance, re-align, and restore energy using magnets.',
+    point6: 'How to protect yourself from intrusion or negative energy.',
     point1Img: '/public/images/EditedVert1.png',
     point2Img: '/public/images/EditedVert1.png',
     point3Img: '/public/images/EditedVert1.png',
@@ -136,19 +146,19 @@ const healingContent = {
 }
 
 const elegantContent = {
-    textGradient: 'linear-gradient(160deg, #FFC700 30%, #FF6B00)',
+    textGradient: 'linear-gradient(160deg, #DB00FF 30%, #7000FF)',
     heroImage: '/public/images/NeuroElegantEdited.png',
     heroText: 'ELEGANT',
     heroParagraph: '<b>Neuro Elegance™</b> is an interactive program on how to <b>create your image</b>.',
-    buttonGradient: 'linear-gradient(160deg, #FFC700 30%, #FF6B00)',
-    buttonShadow: '0 0 30px #FF6B00',
+    buttonGradient: 'linear-gradient(160deg, #DB00FF 30%, #7000FF)',
+    buttonShadow: '0 0 30px #7000FF',
     infoImage: '/public/images/NeuroElegantInfoEdited.png',
-    point1: 'How Neuro Design will help you create your new image and feel comfortable in it',
-    point2: 'How to choose the right clothes for your body shape',
-    point3: 'How to build capsule collections for all your special events',
-    point4: 'How to present your best colors and details for your new image, skin tone and hair style',
-    point5: 'How to transform your mindset to potray a confident and successful image of yourself',
-    point6: 'How to perform your new image through body language, gestures and public speaking',
+    point1: 'How Neuro Design will help you create your new image and feel comfortable in it.',
+    point2: 'How to choose the right clothes for your body shape.',
+    point3: 'How to build capsule collections for all your special events.',
+    point4: 'How to present your best colors and details for your new image, skin tone and hair style.',
+    point5: 'How to transform your mindset to potray a confident and successful image of yourself.',
+    point6: 'How to perform your new image through body language, gestures and public speaking.',
     point1Img: '/public/images/NeuroElegantIcon1.png',
     point2Img: '/public/images/NeuroElegantIcon2.png',
     point3Img: '/public/images/NeuroElegantIcon3.png',
@@ -165,12 +175,12 @@ const mindsetContent = {
     buttonGradient: 'linear-gradient(160deg, #00FFC2 30%, #0085FF)',
     buttonShadow: '0 0 30px #0085FF',
     infoImage: '/public/images/EditedNeuroAware.png',
-    point1: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati magni soluta aperiam reprehenderit nemo voluptatum eos vel dolorum ipsam.',
-    point2: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia maiores consequatur aspernatur dolor doloremque velit, asperiores numquam iusto deleniti nostrum.',
-    point3: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat nesciunt suscipit iste doloribus enim maiores consectetur eveniet dicta itaque?',
-    point4: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsum itaque aspernatur molestias cumque consequatur minima omnis sint quos iure?',
-    point5: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sed cum nihil id omnis doloribus. Repellendus labore nam deserunt quos!',
-    point6: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo repudiandae omnis consequatur, neque corporis tempore! Officiis molestias maxime ratione!',
+    point1: 'How to overcome stress situation analyzing the core issue through neuro-analytic algorithm.',
+    point2: 'How to express through the drawing the sensations you dived in during the healing session.',
+    point3: 'How to restore the energy by resonating with a bio-structure using neuro-algorithm.',
+    point4: 'How to transform your inner world to self-confident and successful image of yourself.',
+    point5: 'How to raise the vibrations in your body using our neuro-mindset and bring the pure joy in your life.',
+    point6: 'How to set up your new vision of your unlimited horizons in career, communications and relationships.',
     point1Img: '/public/images/EditedNeuroAware.png',
     point2Img: '/public/images/EditedNeuroAware.png',
     point3Img: '/public/images/EditedNeuroAware.png',
@@ -223,6 +233,7 @@ const changeContents = function(section) {
         document.getElementById('hero-img').src = section.heroImage;
         document.getElementById('hero-button').style.backgroundImage = section.buttonGradient;
         document.getElementById('hero-button').style.boxShadow = section.buttonShadow;
+        document.getElementById('contact-header').style.backgroundImage = section.textGradient;
 
         sleep(200).then(() => {
 
@@ -424,6 +435,8 @@ function openImage(img) {
 
 }
 
+changeContents(healingContent);
+
 /* 
 
 
@@ -441,11 +454,17 @@ function sendEmail(message) {
 
 FOR TELEGRAM CHAT
 
-t.me/marinamacleod (open in new window, and it will start message log with user [in this case, mom])
+https://t.me/marinamacleod/text={hello!} (open in new window, and it will start message log with user [in this case, mom]) << 
+
+
+FOR TWITTER CHAT
+
+https://twitter.com/messages/compose?recipient_id=1770938195644915713&text=Hello%20world <<make sure to change the text of the message
+
 
 
 FOR INSTA CHAT
 
-https://www.instagram.com/neurocoursess/ (send them to instagram in new tab, this will start message log with user)
+https://ig.me/m/neurocoursess <sends straight to dms, make sure to setup ice breakers on insta
 
 */
