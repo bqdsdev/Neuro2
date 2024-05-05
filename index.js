@@ -132,7 +132,7 @@ const healingContent = {
     buttonShadow: '0 0 30px #FF6B00',
     explainImage: '/public/images/Vert5.jpg',
     explainParagraph: 'NEURO DESIGN is a CREATIVE MAGIC, where we can create the reality we want with our own thoughts and intention, consciously delving into the layers of our subconscious and taking out resources for building the life of our dreams.<br><br>You become aware of the problems and blocks in your body which are pulling your energy, mood and self-esteem down, and creating health issues.',
-    infoImage: '/public/images/EditedVert1.png',
+    infoImage: '/public/images/HealingTwo.png',
     point1: 'How to remove negative energy and re energize the problem zones in your body.',
     point2: 'How to cleanse the organs and channels of energy flow using sound healing.',
     point3: 'How to improve your health by using vibrations of the shamanic tools.',
@@ -156,7 +156,7 @@ const elegantContent = {
     buttonShadow: '0 0 30px #7000FF',
     explainImage: '/public/images/Vert4.png',
     explainParagraph: "NEURO DESIGN is a CREATIVE MAGIC, where we can create the reality we want with our own thoughts and intention, consciously delving into the layers of our subconscious and taking out resources for building the life of our dreams.<br><br>WE SHOW YOU THE TECHNIQUES AND ALGORITHMS ON HOW TO BUILD THE ELEGANT IMAGE OF YOUR DREAM.<br><br>In this course you discover your personality style and by using our algorithms you'll be able to create the image you are dreaming of.",
-    infoImage: '/public/images/NeuroElegantInfoEdited.png',
+    infoImage: '/public/images/EleganceTwo.png',
     point1: 'How Neuro Design will help you create your new image and feel comfortable in it.',
     point2: 'How to choose the right clothes for your body shape.',
     point3: 'How to build capsule collections for all your special events.',
@@ -167,7 +167,7 @@ const elegantContent = {
     point2Img: '/public/images/NeuroElegantIcon2.png',
     point3Img: '/public/images/NeuroElegantIcon3.png',
     point4Img: '/public/images/NeuroElegantIcon4.png',
-    point5Img: '/public/images/NeuroElegantEdited.png',
+    point5Img: '/public/images/NeuroElegantIcon5.png',
     point6Img: '/public/images/NeuroElegantEdited.png',
 }
 
@@ -180,19 +180,19 @@ const mindsetContent = {
     buttonShadow: '0 0 30px #0085FF',
     explainImage: '/public/images/Vert3.png',
     explainParagraph: "NEURO DESIGN is a CREATIVE MAGIC, where we can create the reality we want with our own thoughts and intention, consciously delving into the layers of our subconscious and taking out resources for building the life of our dreams.<br><br>YOU ARE LEARNING TO HOLD THE CONTROL OVER YOUR LIFE IN YOUR  HANDS AND ADJUST YOUR EXISTING LIFESTYLE TO THE STYLE OF YOUR DREAM.",
-    infoImage: '/public/images/EditedNeuroAware.png',
+    infoImage: '/public/images/MindsetTwo.png',
     point1: 'How to overcome stress situation analyzing the core issue through neuro-analytic algorithm.',
     point2: 'How to express through the drawing the sensations you dived in during the healing session.',
     point3: 'How to restore the energy by resonating with a bio-structure using neuro-algorithm.',
     point4: 'How to transform your inner world to self-confident and successful image of yourself.',
     point5: 'How to raise the vibrations in your body using our neuro-mindset and bring the pure joy in your life.',
     point6: 'How to set up your new vision of your unlimited horizons in career, communications and relationships.',
-    point1Img: '/public/images/EditedNeuroAware.png',
-    point2Img: '/public/images/EditedNeuroAware.png',
-    point3Img: '/public/images/EditedNeuroAware.png',
-    point4Img: '/public/images/EditedNeuroAware.png',
-    point5Img: '/public/images/EditedNeuroAware.png',
-    point6Img: '/public/images/EditedNeuroAware.png',
+    point1Img: '/public/images/MindsetIcon1.png',
+    point2Img: '/public/images/MindsetIcon2.png',
+    point3Img: '/public/images/MindsetIcon3.png',
+    point4Img: '/public/images/MindsetIcon4.png',
+    point5Img: '/public/images/MindsetIcon5.png',
+    point6Img: '/public/images/MindsetIcon6.png',
 }
 
 const changeContents = function(section) {
@@ -382,8 +382,8 @@ function aspectChange(aspectMedia) {
         aspectRatio = 'PC';
         document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 53.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 75%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
         
-        document.getElementById('info-two').classList.remove('animate-right');
-        document.getElementById('info-five').classList.remove('animate-left');
+        document.getElementById('info-two').classList.remove('animate-left');
+        document.getElementById('info-five').classList.remove('animate-right');
         document.getElementById('info-two').classList.add('animate-right');
         document.getElementById('info-five').classList.add('animate-left');
 
