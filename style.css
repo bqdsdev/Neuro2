@@ -343,6 +343,97 @@ body {
 }
 
 
+.explain-section {
+
+    margin: var(--def-section-margin);
+
+
+    display: flex;
+    align-items: center;
+
+
+    .explain-container {
+
+        flex: 1;
+
+
+        height: 90%;
+        max-height: 90%;
+
+    }
+
+
+    .row-1 {
+
+        text-align: center;
+        margin: 0 0 0 5vw;
+        height: 80vh;
+
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 5%;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+        }
+
+    }
+
+
+    .row-2 {
+
+        margin: 0 5vw 0 0;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        gap: 2vw;
+
+
+        overflow: hidden;
+
+
+        text-align: left;
+
+
+        .explain-header {
+
+
+            font-family: var(--def-lrg-font);
+            font-weight: var(--bold-font-weight);
+            font-size: clamp(0.1em, 5vw, 7.25em);
+
+
+            background: linear-gradient(160deg, #61FF00 30%, #00700B);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            transition-delay: 0.5s;
+
+        }
+
+
+        .explain-paragraph {
+
+            margin: 0 2%;
+
+            font-size: clamp(0.1em, 1.3vw, 1.8em);
+
+            transition-delay: 0.75s;
+
+        }
+
+    }
+
+}
+
+
 
 .info-section {
 
@@ -1470,6 +1561,61 @@ body {
                 width: 80%;
                 padding: 4% 0;
             }
+        }
+
+    }
+
+    .explain-section {
+
+        flex-direction: column;
+
+        gap: 2vh;
+
+        .row-1 {
+            margin: 0;
+            height: 50vh;
+            max-width: 80%;
+
+            transition-delay: 0.25s;
+        }
+
+        .row-2 {
+
+            margin: 0;
+            max-width: 90%;
+
+            justify-content: start;
+            gap: 1vh;
+
+            text-align: center;
+
+            .explain-header {
+
+                width: 100%;
+
+                font-size: clamp(0.1em, 10vw, 3em);
+
+
+                background: linear-gradient(160deg, #61FF00 30%, #00700B);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                transition-delay: 0.5s;
+
+            }
+
+
+            .explain-paragraph {
+
+                margin: 0;
+
+                font-size: clamp(0.1em, 2vh, 1.25em);
+
+                transition-delay: 0.5s;
+
+            }
+
         }
 
     }

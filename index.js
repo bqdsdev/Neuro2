@@ -130,6 +130,8 @@ const healingContent = {
     heroParagraph: '<b>Neuro Healing™</b> is an interactive program on how to <b>improve your health</b>.',
     buttonGradient: 'linear-gradient(160deg, #FFC700 30%, #FF6B00)',
     buttonShadow: '0 0 30px #FF6B00',
+    explainImage: '/public/images/Vert5.jpg',
+    explainParagraph: 'NEURO DESIGN is a CREATIVE MAGIC, where we can create the reality we want with our own thoughts and intention, consciously delving into the layers of our subconscious and taking out resources for building the life of our dreams.<br><br>You become aware of the problems and blocks in your body which are pulling your energy, mood and self-esteem down, and creating health issues.',
     infoImage: '/public/images/EditedVert1.png',
     point1: 'How to remove negative energy and re energize the problem zones in your body.',
     point2: 'How to cleanse the organs and channels of energy flow using sound healing.',
@@ -137,12 +139,12 @@ const healingContent = {
     point4: 'How to manage your weight condition using the magnets tools for balance.',
     point5: 'How to rebalance, re-align, and restore energy using magnets.',
     point6: 'How to protect yourself from intrusion or negative energy.',
-    point1Img: '/public/images/EditedVert1.png',
-    point2Img: '/public/images/EditedVert1.png',
-    point3Img: '/public/images/EditedVert1.png',
-    point4Img: '/public/images/EditedVert1.png',
-    point5Img: '/public/images/EditedVert1.png',
-    point6Img: '/public/images/EditedVert1.png',
+    point1Img: '/public/images/HealingIcon1.png',
+    point2Img: '/public/images/HealingIcon2.png',
+    point3Img: '/public/images/HealingIcon3.png',
+    point4Img: '/public/images/HealingIcon4.png',
+    point5Img: '/public/images/HealingIcon5.png',
+    point6Img: '/public/images/HealingIcon6.png',
 }
 
 const elegantContent = {
@@ -152,6 +154,8 @@ const elegantContent = {
     heroParagraph: '<b>Neuro Elegance™</b> is an interactive program on how to <b>create your image</b>.',
     buttonGradient: 'linear-gradient(160deg, #DB00FF 30%, #7000FF)',
     buttonShadow: '0 0 30px #7000FF',
+    explainImage: '/public/images/Vert4.png',
+    explainParagraph: "NEURO DESIGN is a CREATIVE MAGIC, where we can create the reality we want with our own thoughts and intention, consciously delving into the layers of our subconscious and taking out resources for building the life of our dreams.<br><br>WE SHOW YOU THE TECHNIQUES AND ALGORITHMS ON HOW TO BUILD THE ELEGANT IMAGE OF YOUR DREAM.<br><br>In this course you discover your personality style and by using our algorithms you'll be able to create the image you are dreaming of.",
     infoImage: '/public/images/NeuroElegantInfoEdited.png',
     point1: 'How Neuro Design will help you create your new image and feel comfortable in it.',
     point2: 'How to choose the right clothes for your body shape.',
@@ -174,6 +178,8 @@ const mindsetContent = {
     heroParagraph: '<b>Neuro Mindset™</b> is an interactive program on how to <b>improve your awareness</b>.',
     buttonGradient: 'linear-gradient(160deg, #00FFC2 30%, #0085FF)',
     buttonShadow: '0 0 30px #0085FF',
+    explainImage: '/public/images/Vert3.png',
+    explainParagraph: "NEURO DESIGN is a CREATIVE MAGIC, where we can create the reality we want with our own thoughts and intention, consciously delving into the layers of our subconscious and taking out resources for building the life of our dreams.<br><br>YOU ARE LEARNING TO HOLD THE CONTROL OVER YOUR LIFE IN YOUR  HANDS AND ADJUST YOUR EXISTING LIFESTYLE TO THE STYLE OF YOUR DREAM.",
     infoImage: '/public/images/EditedNeuroAware.png',
     point1: 'How to overcome stress situation analyzing the core issue through neuro-analytic algorithm.',
     point2: 'How to express through the drawing the sensations you dived in during the healing session.',
@@ -191,6 +197,9 @@ const mindsetContent = {
 
 const changeContents = function(section) {
 
+    document.getElementById('explain-image').src = section.explainImage;
+    document.getElementById('explain-header').style.backgroundImage = section.textGradient;
+    document.getElementById('explain-paragraph').innerHTML = section.explainParagraph;
     document.getElementById('info-header').style.backgroundImage = section.textGradient;
     document.getElementById('info-image').src = section.infoImage;
     document.getElementById('point-1').innerHTML = section.point1;
@@ -210,6 +219,7 @@ const changeContents = function(section) {
     document.getElementById('final-header').style.backgroundImage = section.textGradient;
     document.getElementById('final-button').style.backgroundImage = section.buttonGradient;
     document.getElementById('final-button').style.boxShadow = section.buttonShadow;
+    document.getElementById('contact-header').style.backgroundImage = section.textGradient;
 
     document.getElementById('hero-text').classList.remove('show');
     document.getElementById('hero-paragraph').classList.remove('show');
@@ -233,7 +243,6 @@ const changeContents = function(section) {
         document.getElementById('hero-img').src = section.heroImage;
         document.getElementById('hero-button').style.backgroundImage = section.buttonGradient;
         document.getElementById('hero-button').style.boxShadow = section.buttonShadow;
-        document.getElementById('contact-header').style.backgroundImage = section.textGradient;
 
         sleep(200).then(() => {
 
@@ -361,6 +370,13 @@ function aspectChange(aspectMedia) {
         document.getElementById('about-header').classList.add('animate-up');
         document.getElementById('about-paragraph').classList.add('animate-up');
 
+        document.getElementById('explain-img').classList.remove('animate-right');
+        document.getElementById('explain-header').classList.remove('animate-left');
+        document.getElementById('explain-paragraph').classList.remove('animate-left');
+        document.getElementById('explain-img').classList.add('animate-down');
+        document.getElementById('explain-header').classList.add('animate-up');
+        document.getElementById('explain-paragraph').classList.add('animate-up');
+
         console.log('SWAPPING TO MOBILE');
     } else {
         aspectRatio = 'PC';
@@ -377,6 +393,13 @@ function aspectChange(aspectMedia) {
         document.getElementById('about-img').classList.add('animate-right');
         document.getElementById('about-header').classList.add('animate-left');
         document.getElementById('about-paragraph').classList.add('animate-left');
+
+        document.getElementById('explain-img').classList.remove('animate-down');
+        document.getElementById('explain-header').classList.remove('animate-up');
+        document.getElementById('explain-paragraph').classList.remove('animate-up');
+        document.getElementById('explain-img').classList.add('animate-right');
+        document.getElementById('explain-header').classList.add('animate-left');
+        document.getElementById('explain-paragraph').classList.add('animate-left');
 
         console.log('SWAPPING TO PC');
     }
