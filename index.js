@@ -376,8 +376,6 @@ function aspectChange(aspectMedia) {
         document.getElementById('explain-img').classList.add('animate-down');
         document.getElementById('explain-header').classList.add('animate-up');
         document.getElementById('explain-paragraph').classList.add('animate-up');
-
-        console.log('SWAPPING TO MOBILE');
     } else {
         aspectRatio = 'PC';
         document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 60%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 80%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
@@ -400,8 +398,6 @@ function aspectChange(aspectMedia) {
         document.getElementById('explain-img').classList.add('animate-right');
         document.getElementById('explain-header').classList.add('animate-left');
         document.getElementById('explain-paragraph').classList.add('animate-left');
-
-        console.log('SWAPPING TO PC');
     }
 
 }
