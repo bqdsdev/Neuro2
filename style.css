@@ -1549,12 +1549,10 @@ body {
     }
 
     .contact-lightbox {
-
-        padding: 2vw;
         
         .bg {
             height: 60vh;
-            width: 85vw;
+            width: 82.5vw;
 
             .contact-header {
                 font-size: clamp(0.1em, 8vw, 4em);
