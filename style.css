@@ -537,7 +537,7 @@ body {
                 max-height: 60%;
                 object-fit: contain;
                 text-align: center;
-                
+
                 pointer-events: none;
                 user-select: none;
 
@@ -599,6 +599,104 @@ body {
 
     }
 
+}
+
+
+.step-section {
+    
+    margin: var(--def-section-margin);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2vw;
+
+    .step-header {
+        text-align: center;
+        font-size: clamp(0.1em, 5vw, 7.25em);
+        font-weight: var(--bold-font-weight);
+        font-family: var(--def-lrg-font);
+        margin: 5vh 0;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition-delay: 0.5s;
+    }
+
+    .step-container {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 5vh 0;
+
+        gap: 1vw;
+
+        div {
+
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .header {
+                text-align: center;
+                font-size: clamp(0.1em, 1.7vw, 2.25em);
+                font-weight: var(--medium-font-weight);
+                max-width: 100%;
+                flex: 0.2;
+            }
+
+            .para {
+                text-align: center;
+                font-size: clamp(0.1em, 1.2vw, 1.8em);
+                max-width: 100%;
+            }
+        }
+        img {
+            max-width: 4vw;
+            object-fit: contain;
+            transition-delay: 1.25s;
+        }
+
+        #step-1 {
+            transition-delay: 0.5s;
+        }
+
+        #step-2 {
+            transition-delay: 0.75s;
+        }
+
+        #step-3 {
+            transition-delay: 1s;
+        }
+
+        #step-4 {
+            transition-delay: 1.25s;
+        }
+        
+        #step-5 {
+            transition-delay: 1.5s;
+        }
+
+        #step-img-1 {
+            transition-delay: 0.6s
+        }
+
+        #step-img-2 {
+            transition-delay: 0.85s
+        }
+
+        #step-img-3 {
+            transition-delay: 1.1s
+        }
+
+        #step-img-4 {
+            transition-delay: 1.35s
+        }
+
+    }
 }
 
 
@@ -1407,6 +1505,40 @@ body {
     
             .six {
                 transition-delay: 0.3s;
+            }
+        }
+
+    }
+
+    .step-section {
+
+        .step-header {
+            font-size: clamp(0.1em, 10vw, 3em);
+        }
+
+        .step-container {
+            width: 95%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1vh;
+            
+            div {
+                
+                gap: 1vh;
+
+                .header {
+                    font-size: clamp(0.1em, 7.5vw, 2em);
+                }
+                .para {
+                    font-size: clamp(0.1em, 2vh, 1.25em);
+                }
+            }
+
+            img {
+                max-width: 10vw;
+                object-fit: contain;
+                transition-delay: 1.25s;
             }
         }
 

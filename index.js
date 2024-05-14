@@ -104,9 +104,9 @@ const animateGradient = function(color) {
             let generateGradient
 
             if (aspectRatio == 'PC') {
-                generateGradient = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 60%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 80%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+                generateGradient = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 65%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 81.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
             } else if (aspectRatio == 'MOBILE') {
-                generateGradient = `radial-gradient(70% 4% at 50% 5.65%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 55%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 80%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+                generateGradient = `radial-gradient(70% 4% at 50% 5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 61%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 82.5%, rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, 0.65), rgba(0, 0, 0, 0))`;
             }
 
             document.body.style.backgroundImage = generateGradient;
@@ -132,6 +132,11 @@ const healingContent = {
     buttonShadow: '0 0 30px #FF6B00',
     explainImage: '/public/images/Vert5.jpg',
     explainParagraph: '<b>Neuro-Courses are a creative magic where you can create the reality you want with your thoughts and intentions, consciously delving into the layers of your subconscious and taking out the required resources needed to build the life of your dreams.</b> <br><br>Neuro-Healing helps become aware of the problems and blocks in your body which are pulling your energy, mood, and self-esteem down, creating health issues.',
+    step1: 'Diagnostic of the problem using sound healing shamanic energy tools.',
+    step2: 'Finding the problem and applying the algorithm of healing to this specific area.',
+    step3: 'Healing remedy which is the algorithm of recovery for this particular organ or situation.',
+    step4: 'Designing for you the special ritual for maintaining the healthy habits for empowerful life.',
+    step5: 'Manifesting of the healthy way of life using unique algorithm which created for each individual by drawing the healing Mind Map.',
     infoImage: '/public/images/HealingTwo.png',
     point1: 'How to remove negative energy and re energize the problem zones in your body.',
     point2: 'How to cleanse the organs and channels of energy flow using sound healing.',
@@ -156,6 +161,11 @@ const elegantContent = {
     buttonShadow: '0 0 30px #7000FF',
     explainImage: '/public/images/Vert4.png',
     explainParagraph: "<b>Neuro Courses are a creative magic, where you can create the reality you want with your thoughts and intentions, consciously delving into the layers of your subconscious and taking out the required resources to build the life of your dreams.</b><br><br>Neuro-Elegance allows you to discover your unique personality and style from its roots by using my algorithms that will uncover and create the image you have always dreamed of.",
+    step1: 'Take a holistic approach for creating a positive and unique self image',
+    step2: 'Work collaboratively with you throughout your image-creating journey',
+    step3: 'Providing clarity, accountability, and on-going support, always encouraging you',
+    step4: 'Harmonizing your inner and outer self image using unique algorithm',
+    step5: 'Giving you new perspectives on the world of Image-creation in your potentials',
     infoImage: '/public/images/ElegantTwo.png',
     point1: 'How Neuro Design will help you create your new image and feel comfortable in it.',
     point2: 'How to choose the right clothes for your body shape.',
@@ -180,6 +190,11 @@ const mindsetContent = {
     buttonShadow: '0 0 30px #0085FF',
     explainImage: '/public/images/Vert3.png',
     explainParagraph: "<b>Neuro Courses are a creative magic, where you can create the reality you want with your thoughts and intentions, consciously delving into the layers of your subconscious and taking out the required resources to build the life of your dreams.</b><br><br>Neuro-Mindset teaches you how to hold control over your life in your hands and adjust your existing lifestyle to one that not only better fits your goals, but also helps you grow and evolve.",
+    step1: 'Diagnostic of the problem using sound healing shamanic energy tools.',
+    step2: 'Finding the problem and applying the algorithm of healing to this specific area.',
+    step3: 'Healing remedy which is the algorithm of recovery for this particular organ or situation.',
+    step4: 'Designing for you the special ritual for maintaining the healthy habits for empowerful life.',
+    step5: 'Manifesting of the healthy way of life using unique algorithm which created for each individual by drawing the healing Mind Map.',
     infoImage: '/public/images/MindsetTwo.png',
     point1: 'How to overcome stress situation analyzing the core issue through neuro-analytic algorithm.',
     point2: 'How to express through the drawing the sensations you dived in during the healing session.',
@@ -200,6 +215,11 @@ const changeContents = function(section) {
     document.getElementById('explain-image').src = section.explainImage;
     document.getElementById('explain-header').style.backgroundImage = section.textGradient;
     document.getElementById('explain-paragraph').innerHTML = section.explainParagraph;
+    document.getElementById('step-para-1').innerHTML = section.step1;
+    document.getElementById('step-para-2').innerHTML = section.step2;
+    document.getElementById('step-para-3').innerHTML = section.step3;
+    document.getElementById('step-para-4').innerHTML = section.step4;
+    document.getElementById('step-para-5').innerHTML = section.step5;
     document.getElementById('info-header').style.backgroundImage = section.textGradient;
     document.getElementById('info-image').src = section.infoImage;
     document.getElementById('point-1').innerHTML = section.point1;
@@ -214,6 +234,7 @@ const changeContents = function(section) {
     document.getElementById('point-4-img').src = section.point4Img;
     document.getElementById('point-5-img').src = section.point5Img;
     document.getElementById('point-6-img').src = section.point6Img;
+    document.getElementById('step-header').style.backgroundImage = section.textGradient;
     document.getElementById('about-header').style.backgroundImage = section.textGradient;
     document.getElementById('ref-header').style.backgroundImage = section.textGradient;
     document.getElementById('final-header').style.backgroundImage = section.textGradient;
@@ -354,7 +375,7 @@ function aspectChange(aspectMedia) {
 
     if (aspectMedia.matches) {
         aspectRatio = 'MOBILE';
-        document.body.style.backgroundImage = `radial-gradient(70% 4% at 50% 5.65%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 55%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 80%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+        document.body.style.backgroundImage = `radial-gradient(70% 4% at 50% 5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(80% 5.25% at 50% 61%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(110% 12.5% at 50% 82.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
         
         document.getElementById('info-header').classList.remove('animate-down');
         document.getElementById('info-two').classList.remove('animate-right');
@@ -362,6 +383,33 @@ function aspectChange(aspectMedia) {
         document.getElementById('info-header').classList.add('animate-up');
         document.getElementById('info-two').classList.add('animate-left');
         document.getElementById('info-five').classList.add('animate-right');
+
+        const stepContainers = document.querySelectorAll('.step-mini-container');
+        for (let i = 0; i < stepContainers.length; i++) {
+            const el = stepContainers[i];
+
+            el.classList.remove('animate-right');
+            el.classList.add('animate-down');
+        }
+        const stepImgContainers = document.querySelectorAll('.step-img-container');
+        for (let i = 0; i < stepImgContainers.length; i++) {
+            const el = stepImgContainers[i];
+
+            el.src = "/public/images/arrowDownImg.png";
+            el.classList.remove('animate-right');
+            el.classList.add('animate-down');
+        }
+
+        document.getElementById('step-1').style.transitionDelay = '0.5s';
+        document.getElementById('step-2').style.transitionDelay = '0.5s';
+        document.getElementById('step-3').style.transitionDelay = '0.5s';
+        document.getElementById('step-4').style.transitionDelay = '0.5s';
+        document.getElementById('step-5').style.transitionDelay = '0.5s';
+        document.getElementById('step-img-1').style.transitionDelay = '0.5s';
+        document.getElementById('step-img-2').style.transitionDelay = '0.5s';
+        document.getElementById('step-img-3').style.transitionDelay = '0.5s';
+        document.getElementById('step-img-4').style.transitionDelay = '0.5s';
+
 
         document.getElementById('about-img').classList.remove('animate-right');
         document.getElementById('about-header').classList.remove('animate-left');
@@ -378,12 +426,38 @@ function aspectChange(aspectMedia) {
         document.getElementById('explain-paragraph').classList.add('animate-up');
     } else {
         aspectRatio = 'PC';
-        document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 60%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 80%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
+        document.body.style.backgroundImage = `radial-gradient(60% 17.5% at 95% 7.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(60% 15% at 0% 65%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0)), radial-gradient(85% 7.5% at 50% 81.5%, rgba(${currentColor.r}, ${currentColor.g}, ${currentColor.b}, 0.65), rgba(0, 0, 0, 0))`;
         
         document.getElementById('info-two').classList.remove('animate-left');
         document.getElementById('info-five').classList.remove('animate-right');
         document.getElementById('info-two').classList.add('animate-right');
         document.getElementById('info-five').classList.add('animate-left');
+
+        const stepContainers = document.querySelectorAll('.step-mini-container');
+        for (let i = 0; i < stepContainers.length; i++) {
+            const el = stepContainers[i];
+
+            el.classList.remove('animate-down');
+            el.classList.add('animate-right');
+        }
+        const stepImgContainers = document.querySelectorAll('.step-img-container');
+        for (let i = 0; i < stepImgContainers.length; i++) {
+            const el = stepImgContainers[i];
+
+            el.src = "/public/images/arrowRightImg.png";
+            el.classList.remove('animate-down');
+            el.classList.add('animate-right');
+        }
+
+        document.getElementById('step-1').style.transitionDelay = '0.5s';
+        document.getElementById('step-2').style.transitionDelay = '0.75s';
+        document.getElementById('step-3').style.transitionDelay = '1s';
+        document.getElementById('step-4').style.transitionDelay = '1.25s';
+        document.getElementById('step-5').style.transitionDelay = '1.5s';
+        document.getElementById('step-img-1').style.transitionDelay = '0.6s';
+        document.getElementById('step-img-2').style.transitionDelay = '0.85s';
+        document.getElementById('step-img-3').style.transitionDelay = '1.1s';
+        document.getElementById('step-img-4').style.transitionDelay = '1.35s';
 
         document.getElementById('about-img').classList.remove('animate-down');
         document.getElementById('about-header').classList.remove('animate-up');
