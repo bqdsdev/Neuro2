@@ -132,11 +132,11 @@ const healingContent = {
     buttonShadow: '0 0 30px #FF6B00',
     explainImage: '/public/images/Vert5.jpg',
     explainParagraph: '<b>Neuro-Courses are a creative magic where you can create the reality you want with your thoughts and intentions, consciously delving into the layers of your subconscious and taking out the required resources needed to build the life of your dreams.</b> <br><br>Neuro-Healing helps become aware of the problems and blocks in your body which are pulling your energy, mood, and self-esteem down, creating health issues.',
-    step1: 'Diagnostic of the problem using sound healing shamanic energy tools.',
-    step2: 'Finding the problem and applying the algorithm of healing to this specific area.',
-    step3: 'Healing remedy which is the algorithm of recovery for this particular organ or situation.',
-    step4: 'Designing for you the special ritual for maintaining the healthy habits for empowerful life.',
-    step5: 'Manifesting of the healthy way of life using unique algorithm which created for each individual by drawing the healing Mind Map.',
+    step1: 'Finding the root of your problems using shamanic energy tools.', //find problem
+    step2: 'Applying my algorithm of healing to your problematic area.', //apply healing
+    step3: 'Helping you recover from your past problems and energy blockage.', //recovering
+    step4: 'Re-imaging your day-to-day lifestyle using an algorithm tailored to you.', //re-imagining lifestyle
+    step5: 'Affirming your new healthy and fulfilled lifestyle through a unique mind-map.', //affirming the solution 
     infoImage: '/public/images/HealingTwo.png',
     point1: 'How to remove negative energy and re energize the problem zones in your body.',
     point2: 'How to cleanse the organs and channels of energy flow using sound healing.',
@@ -161,11 +161,11 @@ const elegantContent = {
     buttonShadow: '0 0 30px #7000FF',
     explainImage: '/public/images/Vert4.png',
     explainParagraph: "<b>Neuro Courses are a creative magic, where you can create the reality you want with your thoughts and intentions, consciously delving into the layers of your subconscious and taking out the required resources to build the life of your dreams.</b><br><br>Neuro-Elegance allows you to discover your unique personality and style from its roots by using my algorithms that will uncover and create the image you have always dreamed of.",
-    step1: 'Take a holistic approach for creating a positive and unique self image',
-    step2: 'Work collaboratively with you throughout your image-creating journey',
-    step3: 'Providing clarity, accountability, and on-going support, always encouraging you',
-    step4: 'Harmonizing your inner and outer self image using unique algorithm',
-    step5: 'Giving you new perspectives on the world of Image-creation in your potentials',
+    step1: 'Finding your own personal style using my algorithm.',
+    step2: 'Creating your image according to your own physical traits.',
+    step3: 'Helping you declutter and organize your old wardrobe.',
+    step4: 'Adding new attire to your existing closet based off my algorithm.',
+    step5: 'Teaching you how to present and feel comfortable in your new image!',
     infoImage: '/public/images/ElegantTwo.png',
     point1: 'How Neuro Design will help you create your new image and feel comfortable in it.',
     point2: 'How to choose the right clothes for your body shape.',
